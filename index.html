@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Blog</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        .hover-scale:hover {
+            transform: scale(1.02);
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: #DC2626;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .button-hover {
+            transition: all 0.3s ease;
+        }
+        .button-hover:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <!-- Navigation -->
+    <nav class="container mx-auto px-6 py-4">
+        <div class="flex justify-between items-center">
+            <div class="text-2xl font-bold">Logo</div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#" class="nav-link hover:text-red-600">Home</a>
+                <a href="#" class="nav-link hover:text-red-600">Update</a>
+                <a href="#" class="nav-link hover:text-red-600">News</a>
+                <a href="#" class="nav-link hover:text-red-600">Recap</a>
+                <a href="#" class="nav-link hover:text-red-600">About Page</a>
+            </div>
+            <button class="md:hidden">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="container mx-auto px-6 py-16">
+        <div class="flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2">
+                <p class="text-gray-600 mb-4">Tech Is Easy</p>
+                <h1 class="text-4xl font-bold mb-4">Setiap Anak Muda Indonesia Wajib Paham Teknologi. <img src="https://flagcdn.com/24x18/id.png" alt="Indonesia Flag" class="inline-block ml-1"></h1>
+                <p class="text-gray-600 mb-6">Berita mengenai teknologi terkini bersamaan dengan pembelajaran yang mudah dimengerti oleh anak SD sekalipun.</p>
+                <button class="bg-red-600 text-white px-8 py-3 rounded-lg hover:bg-red-700 button-hover">Baca Sekarang</button>
+            </div>
+            <div class="md:w-1/2 mt-8 md:mt-0">
+                <div class="bg-gray-200 h-64 rounded-lg"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="container mx-auto px-6 py-16">
+        <h2 class="text-3xl font-bold text-center mb-12">3 Jenis Konten yang Siap Nge-<i>Upgrade</i> Literasi Teknologi Kamu</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="p-6 rounded-lg hover:shadow-lg transition duration-300 transform hover:-translate-y-1">
+                <div class="bg-yellow-400 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                    <i class="fas fa-fire text-white"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-2">Tech Update</h3>
+                <p class="text-gray-600">Berita dan tren teknologi terbaru dirangkum dalam bentuk yang mudah dipahami. Update setiap hari di jam 20.00.</p>
+            </div>
+            <div class="p-6 rounded-lg hover:shadow-lg transition duration-300 transform hover:-translate-y-1">
+                <div class="bg-green-500 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                    <i class="fas fa-book text-white"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-2">Tech Guide</h3>
+                <p class="text-gray-600">Pandangan mendalam dari para teknisi papan atas mengenai teknologi - semua dijelaskan untuk pemula.</p>
+            </div>
+            <div class="p-6 rounded-lg hover:shadow-lg transition duration-300 transform hover:-translate-y-1">
+                <div class="bg-red-600 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                    <i class="fas fa-chart-line text-white"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-2">Tech Review</h3>
+                <p class="text-gray-600">Ringkasan mengenai berbagai tools teknologi di dunia. Cocok buat kamu yang sibuk.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Weekly Recap Section -->
+    <section class="bg-black text-white py-16">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl font-bold mb-4">Recap Teknologi Mingguan. Biar Kamu Gak Ketinggalan Zaman.</h2>
+                    <p class="mb-6">Kurang dari 15 menit, kamu bisa paham apa yang terjadi pada dunia teknologi minggu ini.</p>
+                    <button class="bg-red-600 text-white px-8 py-3 rounded-lg hover:bg-red-700 button-hover">Baca Weekly Recap</button>
+                </div>
+                <div class="md:w-1/2 mt-8 md:mt-0">
+                    <div class="bg-gray-800 h-64 rounded-lg"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Articles Section -->
+    <section class="container mx-auto px-6 py-16">
+        <h2 class="text-3xl font-bold text-center mb-12">Tambah pengetahuan dengan baca <i>How It Works</i>.</h2>
+        <div class="grid grid-cols-1 gap-8">
+            <div class="border rounded-lg p-6 hover:shadow-lg transition duration-300 hover-scale">
+                <div class="flex flex-col md:flex-row">
+                    <div class="md:w-1/4">
+                        <div class="bg-gray-200 h-32 rounded-lg"></div>
+                    </div>
+                    <div class="md:w-3/4 md:pl-6 mt-4 md:mt-0">
+                        <p class="text-gray-600 mb-2">Research By University of Chicago</p>
+                        <h3 class="text-xl font-bold mb-2">Glaze: Cara Seniman Melindungi Gaya Lukis dari AI</h3>
+                        <p class="text-gray-600">Penelitian terbaru mengenai tool dari University of Chicago melindungi karya dari pelatihan AI. Bahasa santai, cuma 4 menit baca.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-8">
+            <button class="bg-red-600 text-white px-8 py-3 rounded-lg hover:bg-red-700 button-hover">Read More</button>
+        </div>
+    </section>
+
+    <!-- Latest Tech Section -->
+    <section class="bg-black text-white py-16">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">Informasi Teknologi Terbaru Yang Kamu Bisa Terapkan.</h2>
+            <div class="grid grid-cols-1 gap-8">
+                <div class="bg-white text-black rounded-lg p-6 hover:shadow-lg transition duration-300 hover-scale">
+                    <div class="flex flex-col md:flex-row">
+                        <div class="md:w-1/4">
+                            <div class="bg-gray-200 h-32 rounded-lg"></div>
+                        </div>
+                        <div class="md:w-3/4 md:pl-6 mt-4 md:mt-0">
+                            <p class="text-gray-600 mb-2">Research By University of Chicago</p>
+                            <h3 class="text-xl font-bold mb-2">Glaze: Cara Seniman Melindungi Gaya Lukis dari AI</h3>
+                            <p class="text-gray-600">Penelitian terbaru mengenai tool dari University of Chicago melindungi karya dari pelatihan AI. Bahasa santai, cuma 4 menit baca.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-8">
+                <button class="bg-red-600 text-white px-8 py-3 rounded-lg hover:bg-red-700 button-hover">Read More</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="container mx-auto px-6 py-12">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+            <div>
+                <h3 class="text-xl font-bold mb-2">Kami Membantumu Meningkatkan Literasi Teknologimu</h3>
+            </div>
+            <div class="mt-6 md:mt-0">
+                <ul class="flex space-x-6">
+                    <li><a href="#" class="nav-link hover:text-red-600">Home</a></li>
+                    <li><a href="#" class="nav-link hover:text-red-600">News</a></li>
+                    <li><a href="#" class="nav-link hover:text-red-600">Recap</a></li>
+                    <li><a href="#" class="nav-link hover:text-red-600">About Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const menuButton = document.querySelector('nav button');
+        const menuItems = document.querySelector('nav div.hidden');
+        
+        menuButton.addEventListener('click', () => {
+            menuItems.classList.toggle('hidden');
+            menuItems.classList.toggle('flex');
+            menuItems.classList.toggle('flex-col');
+            menuItems.classList.toggle('absolute');
+            menuItems.classList.toggle('top-16');
+            menuItems.classList.toggle('right-6');
+            menuItems.classList.toggle('bg-white');
+            menuItems.classList.toggle('p-4');
+            menuItems.classList.toggle('rounded-lg');
+            menuItems.classList.toggle('shadow-lg');
+        });
+    </script>
+</body>
+</html>
